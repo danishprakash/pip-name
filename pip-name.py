@@ -4,6 +4,10 @@ import argparse
 import requests
 
 BASE_URL = 'https://pypi.org/pypi'
+RED      = '\033[31m'
+BOLD     = '\033[1m'
+GREEN    = '\033[32m'
+RESET    = '\033[0m'
 
 
 def get_response(name):
@@ -37,9 +41,9 @@ def main():
     args = parser.parse_args()
 
     if is_name_taken(args.name):
-        print('`{0}` is unavailable.'.format(args.name))
+        print('{0}{1}{2} is unavailable.'.format(RED, args.name, RESET))
     else:
-        print('`{0}` is available'.format(args.name))
+        print('{0}{1}{2} is available'.format(GREEN, args.name, RESET))
 
 
 if __name__ == '__main__':
