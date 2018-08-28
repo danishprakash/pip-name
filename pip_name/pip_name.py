@@ -27,7 +27,7 @@ def get_response(name):
 
 
 def inspect_name(name):
-    """Checks name against PEP8's naming conventions"""
+    """Check name against PEP8's naming conventions"""
     suggestions = list()
 
     if len(name) > 12:
@@ -37,7 +37,7 @@ def inspect_name(name):
     if any(x.isupper() for x in name):
         suggestions.append(UPPERCASE)
 
-    return '\n'.join(suggestions)
+    return ('\n\nSuggestions:\n' + '\n'.join(suggestions)) if suggestions else ''
 
 
 def is_name_taken(name):
@@ -60,6 +60,5 @@ def main():
     if is_name_taken(args.name):
         print('{0}{1}{2} is unavailable.'.format(RED, args.name, RESET))
     else:
-        print('{0}{1}{2}  is available\n\nSuggestions:\n{3}'.format(
+        print('{0}{1}{2}  is available{3}'.format(
             GREEN, args.name, RESET, inspect_name(args.name)))
-
