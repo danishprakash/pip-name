@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setup(
     name='pip-name',
-    version='1.0.0',
+    version='1.0.1',
     description='Check whether package name is available on PyPi',
     long_description=long_description,
     author='Danish Prakash',

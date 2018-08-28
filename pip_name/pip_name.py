@@ -8,9 +8,10 @@ RED = '\033[31m'
 BOLD = '\033[1m'
 GREEN = '\033[32m'
 RESET = '\033[0m'
-LENGTH = 'Package name seems way too long, try shortening it'
-UPPERCASE = 'Use of uppercase letters are discouraged'
-SEPERATOR = 'If you must use a separator, consider using `-`'
+LENGTH = 'Name too long (>12)'
+UPPERCASE = 'Use of uppercase letters is discouraged'
+SEPARATOR = 'Use of `-` is discouraged, consider using `_`'
+NUMERIC = 'Use of numbers is discouraged'
 
 
 def get_response(name):
@@ -33,11 +34,13 @@ def inspect_name(name):
     if len(name) > 12:
         suggestions.append(LENGTH)
     if '-' in name or ' ' in name:
-        suggestions.append(SEPERATOR)
+        suggestions.append(SEPARATOR)
     if any(x.isupper() for x in name):
         suggestions.append(UPPERCASE)
+    if any(x.isnumeric() for x in name):
+        suggestions.append(NUMERIC)
 
-    return ('\n\nSuggestions:\n' + '\n'.join(suggestions)) if suggestions else ''
+    return ('\n\nSuggestions:\n  ' + '\n  '.join(suggestions)) if suggestions else ''
 
 
 def is_name_taken(name):
