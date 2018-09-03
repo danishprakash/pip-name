@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """Check whether a package name is available on PyPi"""
 
 import argparse
@@ -65,3 +67,7 @@ def main():
     else:
         print('{0}{1}{2}  is available{3}'.format(
             GREEN, args.name, RESET, inspect_name(args.name)))
+
+
+if '__main__' == __name__:
+    main()
