@@ -35,6 +35,9 @@ Let's see, It's a pain in the ass to finally upload that module you've been writ
 ## Contributing
 Do you want to make this better? Open an issue and/or a PR on Github. Thanks!
 
+## Links
+- Pycoder's Weekly [#332](https://us4.campaign-archive.com/?u=9735795484d2e4c204da82a29&id=840b4a9e90)
+
 ## License
 MIT License
 
