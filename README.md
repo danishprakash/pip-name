@@ -4,6 +4,9 @@
 <img src="https://i.imgur.com/vL6Ip18.gif" height="250">
 </p>
 
+[![Downloads](https://pepy.tech/badge/pip-name)](https://pepy.tech/project/pip-name)
+[![License](https://img.shields.io/pypi/l/pysendfile.svg)](https://pepy.tech/project/pip-name)
+
 ## Install
 
 ```console
@@ -41,4 +44,4 @@ Do you want to make this better? Open an issue and/or a PR on Github. Thanks!
 ## License
 MIT License
 
-Copyright (c) 2018 [Danish Prakash](https://github.com/prakashdanish)
+Copyright (c) 2018 [Danish Prakash](https://github.com/danishprakash)
