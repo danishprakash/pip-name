@@ -1,6 +1,6 @@
 certifi==2024.7.4
 chardet==3.0.4
-idna==2.7
+idna==3.7
 jedi==0.12.1
 parso==0.3.1
 requests==2.31.0
