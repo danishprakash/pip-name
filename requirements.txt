@@ -4,4 +4,4 @@ idna==3.7
 jedi==0.12.1
 parso==0.3.1
 requests==2.32.2
-urllib3==1.26.19
+urllib3==2.5.0
